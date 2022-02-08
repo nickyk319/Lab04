@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.soap.example.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <ser:add>
+            <arg0>3</arg0>
+            <arg1>2</arg1>
+        </ser:add>
+    </soapenv:Body>
+</soapenv:Envelope>
