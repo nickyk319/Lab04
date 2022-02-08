@@ -1,4 +1,5 @@
 package com.example.soap.service;
+import com.example.soap.utils.CalculatorData;
 import javax.jws.WebService;
 
 /**
@@ -17,4 +18,25 @@ public class CalculatorImpl implements Calculator {
 		return "Hello " + content + "!";
 	}
 
+	@Override
+	public double add(double num1, double num2){
+		return num1 + num2;
+	}
+
+	@Override
+	public double subtract(double num1, double num2) {
+		return num1 - num2;
+	}
+
+	@Override
+	public double multiply(double num1, double num2) {
+		return num1 * num2;
+	}
+
+	@Override
+	public CalculatorData multiplyV2(double num1, double num2){
+		double result = num1 * num2;
+		String message = "The number " + num1 + " multiply by " + num2 + " equals to " + result;
+		return new CalculatorData(num1, num2, result, message);
+	}
 }
